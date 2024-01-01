@@ -115,6 +115,12 @@ span.navbar-text {
     display: flex;
     align-items: center;
 }
+.logo-navbar {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
 .social-icon {
     display: inline-block;
     margin-left: 14px;
@@ -154,8 +160,8 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
+  color: #000;
+  border: 1px solid #F15BB5;
   padding: 18px 34px;
   font-size: 18px;
   margin-left: 18px;
@@ -178,7 +184,7 @@ span.navbar-text {
   transition: 0.3s ease-in-out;
 }
 .navbar-text button:hover {
-  color: #121212;
+  color: #F15BB5;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -361,7 +367,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  background-image: url('./assets/img/footer-bg-3.png');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -435,4 +441,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
+}
+.logo-footer {
+  width: 140px;
+  height: 140px;
+  /* margin-bottom: -30px; */
+}
+.footer .social-icon a {
+  width: 54px;
+  height: 54px;
 }
