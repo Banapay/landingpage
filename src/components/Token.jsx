@@ -1,5 +1,4 @@
-import React, { PureComponent } from 'react';
-import { PieChart, Pie, Sector, Cell, ResponsiveContainer } from 'recharts';
+import React from 'react';
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
@@ -10,29 +9,46 @@ import arrow2 from "../assets/img/arrow2.svg";
 // import colorSharp from "../assets/img/color-sharp.png"
 import meshGradient from "../assets/img/mesh-gradient.png"
 
-const data = [
-  { name: 'Presale', value: 20 },
-  { name: 'Marketing', value: 16 },
-  { name: 'Development', value: 10 },
-  { name: 'Team', value: 10 },
-  { name: 'Liquidity pools', value: 17 },
-  { name: 'Exchanges', value: 17 },
-  { name: 'Airdrops', value: 10 },
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut } from "react-chartjs-2";
+import { Table } from 'react-bootstrap';
+
+const distributionData = [
+  { name: 'Presale:', percentage: '10%', tokens: '20000000' },
+  { name: 'Marketing:', percentage: '20%', tokens: '16000000' },
+  { name: 'Development:', percentage: '30%', tokens: '10000000' },
+  { name: 'Team:', percentage: '30%', tokens: '10000000' },
+  { name: 'Liquidity:', percentage: '30%', tokens: '34000000' },
+  { name: 'Airdrop:', percentage: '30%', tokens: '10000000' },
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+ChartJS.register(ArcElement, Tooltip, Legend);
 
-const RADIAN = Math.PI / 180;
-const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
-  const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
-  const x = cx + radius * Math.cos(-midAngle * RADIAN);
-  const y = cy + radius * Math.sin(-midAngle * RADIAN);
-
-  return (
-    <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} dominantBaseline="central">
-      {`${(percent * 100).toFixed(0)}%`}
-    </text>
-  );
+export const data = {
+  labels: ['Presale', 'Marketing', 'Development', 'Team', 'Liquidity', "Airdrop"],
+  datasets: [
+    {
+      label: 'BANA Tokens',
+      data: [20000000, 16000000, 10000000, 10000000, 34000000, 10000000],
+      backgroundColor: [
+        'rgba(255, 99, 132)',
+        'rgba(54, 162, 235)',
+        'rgba(255, 206, 86)',
+        'rgba(75, 192, 192)',
+        'rgba(153, 102, 255)',
+        'rgba(255, 159, 64)',
+      ],
+      borderColor: [
+        'rgba(255, 99, 132, 1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)',
+      ],
+      borderWidth: 1,
+    },
+  ],
 };
 
 export const Token = () => {
@@ -63,23 +79,43 @@ export const Token = () => {
             <div className="token-bx wow zoomIn">
               <h2>Token distribution</h2>
               <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                <PieChart width={300} height={300}>
-                  <Pie
-                    data={data}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    label={renderCustomizedLabel}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value"
-                  >
-                    {data.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                    ))}
-                  </Pie>
-                </PieChart>
-                <h1>Tutaj ktoś musi ogarnąć fajne kolorki, legende i zeby ogólnie fajnie to wyglądało</h1>
+              <div className="chart">
+                <Doughnut
+                  data={data}
+                  options={{
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                      legend: {
+                        position: 'right',
+                        labels: {
+                          fontSize: 60,
+                          boxWidth: 60,
+                          boxHeight: 35,
+                          padding: 20,
+                          color: '#fff',
+                          font: {
+                            size: 26,
+                            weight: 'bold'
+                          }
+                        },
+                        fontSize: 60,
+                      }
+                    }
+                  }}
+                />
+              </div>
+              <Table className="distribution-list" striped hover>
+                <tbody>
+                  {distributionData.map((dist, index) => (
+                    <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#f8f9fa' : '#e9ecef' }}>
+                      <td style={{ float: 'right' }}>{dist.name}</td>
+                      <td>{dist.percentage}</td>
+                      <td>{dist.tokens}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
             </div>
           </div>
         </div>
