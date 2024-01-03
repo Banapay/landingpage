@@ -14,12 +14,12 @@ import { Doughnut } from "react-chartjs-2";
 import { Table } from 'react-bootstrap';
 
 const distributionData = [
-  { name: 'Presale:', percentage: '10%', tokens: '20000000' },
-  { name: 'Marketing:', percentage: '20%', tokens: '16000000' },
+  { name: 'Presale:&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '10%', tokens: '20000000' },
+  { name: 'Marketing:&nbsp;&nbsp;', percentage: '20%', tokens: '16000000' },
   { name: 'Development:', percentage: '30%', tokens: '10000000' },
-  { name: 'Team:', percentage: '30%', tokens: '10000000' },
-  { name: 'Liquidity:', percentage: '30%', tokens: '34000000' },
-  { name: 'Airdrop:', percentage: '30%', tokens: '10000000' },
+  { name: 'Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '30%', tokens: '10000000' },
+  { name: 'Liquidity:&nbsp;&nbsp;', percentage: '30%', tokens: '34000000' },
+  { name: 'Airdrop:&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '30%', tokens: '10000000' },
 ];
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -105,17 +105,17 @@ export const Token = () => {
                   }}
                 />
               </div>
-              <Table className="distribution-list" striped hover>
-                <tbody>
-                  {distributionData.map((dist, index) => (
-                    <tr key={index} style={{ backgroundColor: index % 2 === 0 ? '#f8f9fa' : '#e9ecef' }}>
-                      <td style={{ float: 'right' }}>{dist.name}</td>
-                      <td>{dist.percentage}</td>
-                      <td>{dist.tokens}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </Table>
+              <div className="distribution-list">
+                {distributionData.map((dist, index) => (
+                  <div className="distribution-list-row">
+                    <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
+                    |
+                    <p>{dist.percentage}</p>
+                    |
+                    <p>{dist.tokens}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

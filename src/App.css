@@ -376,8 +376,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 40% !important;
   float: right;
   /* center vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #11CCFA;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 10;
 
-
+}
+.distribution-list-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  float: right;
+  /* padding: 0 40px; */
+  /* margin-bottom: 20px; */
+}
+.distribution-list-row p {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1em;
+  margin: 0;
+  float: right;
+  font-family: monospace;
 }
 
 /************ Footer Css ************/
