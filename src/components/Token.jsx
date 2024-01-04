@@ -96,7 +96,8 @@ export const Token = () => {
                           color: '#fff',
                           font: {
                             size: 26,
-                            weight: 'bold'
+                            weight: 'bold',
+                            family: 'monospace'
                           }
                         },
                         fontSize: 60,
@@ -106,6 +107,13 @@ export const Token = () => {
                 />
               </div>
               <div className="distribution-list">
+                <div className="distribution-list-row">
+                  <p>Supply:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  |
+                  <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
+                  |
+                  <p>&nbsp;10000000</p>
+                </div>
                 {distributionData.map((dist, index) => (
                   <div className="distribution-list-row">
                     <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
