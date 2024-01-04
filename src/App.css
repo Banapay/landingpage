@@ -411,7 +411,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ About Css ************/
 .about {
-  padding: 0 0 50px 0;
+  padding: 50px 0 70px 0;
   position: relative;
   background-color: #efefef;
 }
@@ -419,23 +419,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 1000px;
+  /* width: 1100px; */
   margin-left: auto;
   margin-right: auto;
 }
 .tile {
   flex: 1 0 41%;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 64px;
   padding: 40px 30px;
   margin: 10px;
   margin-bottom: 40px;
   text-align: center;
   transition: 0.3s ease-in-out;
   /* border: 3px solid #fff; */
-  width: 400px !important;
-  min-width: 400px !important;
-  max-width: 400px !important;
+  max-width: 615px;
   height: 400px;
 }
 
