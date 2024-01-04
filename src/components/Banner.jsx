@@ -12,8 +12,8 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Secure Future", "Free Future", "Your Future" ];
-  const period = 1000;
+  const toRotate = [ "Security", "Freedom", "Future", "Banapay" ];
+  const period = 1500;
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -30,9 +30,9 @@ export const Banner = () => {
 
     setText(updatedText);
 
-    if (isDeleting) {
+    // if (isDeleting) {
       setDelta(prevDelta => prevDelta / 2);
-    }
+    // }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
@@ -56,10 +56,11 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to Banapay</span>
+                <span className="tagline">This is your future.</span>
                 <h1 className="we-are">{`We are`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Secure Future", "Free Future", "Your Future" ]'><span className="wrap">{text}</span></span></h1>
-                  <p className="text-dark">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('buy-token')}><p className="buy-token">Buy Token<ArrowRightCircle size={25} /></p> </button>            
+                  <p className="text-dark">Banapay is not just a payment gateway but a platform for building the future of commerce. We provide the ability to own your own money; it's purely and only under your control — all on the blockchain. Accept payments anytime, anywhere. That’s time for financial freedom — for your freedom.</p>
+                  <button onClick={() => console.log('launch-app')}><p className="launch-app">Soon</p> </button>
+                  <button onClick={() => console.log('buy-token')}><p className="buy-token">Buy Token<ArrowRightCircle size={25} /></p> </button>
               </div>}
             </TrackVisibility>
           </Col>

@@ -1,5 +1,5 @@
 /************ Custom Font ************/
-/* @font-face {
+@font-face {
 	font-family: Centra;
 	src: url('./assets/font/CentraNo2-Bold.ttf');
 	font-weight: 700;
@@ -13,7 +13,7 @@
 	font-family: Centra;
 	src: url('./assets/font/CentraNo2-Book.ttf');
 	font-weight: 400;
-} */
+}
 
 /************ Default Css ************/
 * {
@@ -265,6 +265,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1;
   margin-bottom: 20px;
   display: block;
+  font-family: 'centra';
 }
 .banner p {
   color: #B8B8B8;
@@ -277,10 +278,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  margin-top: 60px;
+  margin-top: 30px;
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  margin-left: -20px;
 }
 .banner button svg {
   font-size: 25px;
@@ -306,6 +308,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #F15BB5 !important;
   display: inline-block !important;
   width: 180px !important; 
+  margin-left: 20px;
+  margin-top: -24px;
+}
+.launch-app {
+  display: inline-block !important;
+  width: 180px !important;
+  background-color: #F15BB5;
+  border-radius: 64px;
+  padding: 14px 18px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+.launch-app:hover {
+  background-color: #F37DD7;
 }
 @keyframes updown {
     0% {
