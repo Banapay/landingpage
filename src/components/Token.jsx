@@ -78,7 +78,30 @@ export const Token = () => {
           <div className="col-12">
             <div className="token-bx wow zoomIn">
               <h2>Token distribution</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+              <p>Enjoy cashback, unlock premium features, and influence platform changes through voting. Join us in shaping the future of decentralized finance through our token!</p>
+              {/* Token contract address */}
+              <div className="token-contract-address">
+                <a href="https://solscan.io/token/9mEaVyPj1m15vY8Fr6CYHVvWvdAwfN5sf8FDBA5yac78" target="_blank">Contract: 9mEaVyPj1m15vY8Fr6CYHVvWvdAwfN5sf8FDBA5yac78 (SPL)</a>
+              </div>
+
+              <div className="distribution-list">
+                <div className="distribution-list-row">
+                  <p>Supply:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                  |
+                  <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
+                  |
+                  <p>&nbsp;10000000</p>
+                </div>
+                {distributionData.map((dist, index) => (
+                  <div className="distribution-list-row">
+                    <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
+                    |
+                    <p>{dist.percentage}</p>
+                    |
+                    <p>{dist.tokens}</p>
+                  </div>
+                ))}
+              </div>
               <div className="chart">
                 <Doughnut
                   data={data}
@@ -105,24 +128,6 @@ export const Token = () => {
                     }
                   }}
                 />
-              </div>
-              <div className="distribution-list">
-                <div className="distribution-list-row">
-                  <p>Supply:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  |
-                  <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
-                  |
-                  <p>&nbsp;10000000</p>
-                </div>
-                {distributionData.map((dist, index) => (
-                  <div className="distribution-list-row">
-                    <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
-                    |
-                    <p>{dist.percentage}</p>
-                    |
-                    <p>{dist.tokens}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>

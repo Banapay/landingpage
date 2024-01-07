@@ -427,6 +427,25 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   float: right;
   margin-top: -12px;
 }
+.token-contract-address {
+  width: 100%;
+  border-radius: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  /* padding: 16px; */
+  margin-top: -64px;
+  margin-bottom: 42px;
+  text-align: center;
+}
+.token-contract-address a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 2.4em;
+  margin: 0;
+  margin-top: -28px;
+}
 
 /************ About Css ************/
 .about {
