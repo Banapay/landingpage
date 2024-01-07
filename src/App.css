@@ -462,7 +462,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-right: auto;
 }
 .tile {
-  flex: 1 0 41%;
+  flex: 1 0 11%;
   background: #fff;
   border-radius: 64px;
   padding: 30px 40px;
@@ -492,6 +492,39 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin-top: 20px;
+}
+@media (max-width: 1399px) {
+  .tiles {
+    width: 100%;
+  }
+  .tile {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+    max-width: 544px;
+    width: (100% - 40px);
+  }
+}
+@media (max-width: 1199px) {
+  .tiles {
+    width: 100%;
+  }
+  .tile {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+    max-width: 458px;
+    width: (100% - 40px);
+  }
+}
+@media (max-width: 991px) {
+  .tiles {
+    width: 100%;
+  }
+  .tile {
+    flex: 1 0 100%;
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: (100% - 40px);
+  }
 }
 
 /************ Footer Css ************/
@@ -580,4 +613,111 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .footer .social-icon a {
   width: 54px;
   height: 54px;
+}
+
+@media screen and (max-width: 1200px) {
+  main .container {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main .container {
+    padding: 0 20px;
+  }
+
+  nav.navbar a.navbar-brand {
+    width: auto;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  .logo-navbar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .navbar-text button {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
+  .banner {
+    padding: 160px 0 60px 0;
+  }
+
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .banner button {
+    font-size: 18px;
+  }
+
+  .banner img {
+    width: 300px;
+    margin-left: 40px;
+    margin-bottom: 50px;
+  }
+
+  .token h2 {
+    font-size: 35px;
+  }
+
+  .token p {
+    font-size: 16px;
+  }
+
+  .token-bx {
+    padding: 40px 20px;
+  }
+
+  .distribution-list {
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .distribution-list-row p {
+    font-size: 18px;
+  }
+
+  .token-contract-address {
+    font-size: 18px;
+    margin-top: -40px;
+    margin-bottom: 20px;
+  }
+
+  .about .tile {
+    flex: 1 0 100%;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer .newsletter-bx {
+    padding: 50px;
+    margin-bottom: 30px;
+    margin-top: -50px;
+  }
+
+  .footer img {
+    width: 150px;
+  }
+
+  .footer p {
+    font-size: 12px;
+    margin-top: 10px;
+  }
 }
