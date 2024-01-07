@@ -595,9 +595,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   border-radius: 18px;
 }
-.footer img {
+/* .footer img {
   width: 26%;
-}
+} */
 .footer p {
   font-weight: 400;
   font-size: 14px;
@@ -606,9 +606,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 20px;
 }
 .logo-footer {
-  width: 140px;
-  height: 140px;
-  /* margin-bottom: -30px; */
+  width: 120px;
+  height: 120px;
 }
 .footer .social-icon a {
   width: 54px;
@@ -618,6 +617,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 @media screen and (max-width: 1200px) {
   main .container {
     padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .logo-footer {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -641,9 +649,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   .social-icon a {
-    width: 30px;
-    height: 30px;
+    width: 50px !important;
+    height: 50px !important;
   }
+
 
   .navbar-text button {
     padding: 15px 20px;
@@ -710,10 +719,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 50px;
     margin-bottom: 30px;
     margin-top: -50px;
-  }
-
-  .footer img {
-    width: 150px;
   }
 
   .footer p {
