@@ -90,7 +90,7 @@ export const Token = () => {
                   |
                   <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
                   |
-                  <p>&nbsp;10000000</p>
+                  <p>100000000</p>
                 </div>
                 {distributionData.map((dist, index) => (
                   <div className="distribution-list-row">
