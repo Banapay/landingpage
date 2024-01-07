@@ -521,6 +521,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-right: auto;
   }
 }
+.banner-text-div {
+  display: none;
+}
+.banner-text-col {
+  display: block;
+}
 @media (max-width: 1199px) {
   .tiles {
     width: 100%;
@@ -530,6 +536,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-bottom: 20px;
     max-width: 458px;
     width: (100% - 40px);
+  }
+}
+@media screen and (max-width: 399px) {
+  .banner h1 {
+    font-size: 30px !important;
   }
 }
 @media (max-width: 991px) {
@@ -542,6 +553,83 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     max-width: 100%;
     width: (100% - 40px);
   }
+  .banner img {
+    display: none;
+  }
+  .banner {
+    padding: 160px 0 60px 0;
+  }
+  .banner-text-col {
+    /* width: 1000px !important; */
+    display: none;
+  }
+  .banner-text-div {
+    display: block;
+    width: 100%;
+  }
+  .banner h1 {
+    font-size: 40px;
+  }
+
+  .banner p {
+    font-size: 16px;
+  }
+
+  .banner button {
+    font-size: 18px;
+  }
+
+  main .container {
+    padding: 0 20px;
+  }
+
+  .basic-navbar-nav {
+    background-color: #efefef !important;
+  }
+
+  .ms-auto {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-top: 10px;
+  }
+  
+  .ms-auto a {
+    max-width: 100px;
+    display: flex;
+  }
+
+  .navbar-nav {
+    background-color: #efefef !important;
+  }
+
+  .navbar-text {
+    background-color: #efefef !important;
+  }
+
+  nav.navbar a.navbar-brand {
+    width: auto;
+  }
+
+  nav.navbar .navbar-nav .nav-link.navbar-link {
+    padding: 0 15px;
+    font-size: 16px;
+  }
+
+  .logo-navbar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .social-icon a {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .navbar-text button {
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+
 }
 
 /************ Footer Css ************/
@@ -631,9 +719,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   height: 54px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1300px) {
   main .container {
     padding: 0 50px;
+  }
+
+  .banner img {
+    width: 400px;
+    margin-left: 40px;
+    margin-bottom: 50px;
   }
 }
 
@@ -692,7 +786,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     width: 50px !important;
     height: 50px !important;
   }
-
 
   .navbar-text button {
     padding: 15px 20px;

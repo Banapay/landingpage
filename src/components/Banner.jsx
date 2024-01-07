@@ -52,7 +52,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col className="banner-text-col">
             <TrackVisibility>
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
@@ -64,6 +64,18 @@ export const Banner = () => {
               </div>}
             </TrackVisibility>
           </Col>
+          <div className="banner-text-div">
+            <TrackVisibility>
+              {({ isVisible }) =>
+              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <span className="tagline">Embrace a New Freedom.</span>
+                <h1 className="we-are">{`We are`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Secure Future", "Free Future", "Your Future" ]'><span className="wrap">{text}</span></span></h1>
+                  <p className="text-dark">Banapay transcends being merely a payment gateway; it's a platform shaping the future of commerce. Empowering you to truly own your money, it remains solely under your control through the blockchain. Accept payments with ease, anytime and anywhere. It's time for financial freedom – your freedom.</p>
+                  <button onClick={() => console.log('launch-app')}><p className="launch-app">Soon</p> </button>
+                  <button onClick={() => console.log('buy-token')}><p className="buy-token">Buy Token<ArrowRightCircle size={25} /></p> </button>
+              </div>}
+            </TrackVisibility>
+          </div>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
