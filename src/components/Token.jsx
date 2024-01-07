@@ -14,12 +14,12 @@ import { Doughnut } from "react-chartjs-2";
 import { Table } from 'react-bootstrap';
 
 const distributionData = [
-  { name: 'Presale:&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '10%', tokens: '20000000' },
-  { name: 'Marketing:&nbsp;&nbsp;', percentage: '20%', tokens: '16000000' },
-  { name: 'Development:', percentage: '30%', tokens: '10000000' },
-  { name: 'Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '30%', tokens: '10000000' },
-  { name: 'Liquidity:&nbsp;&nbsp;', percentage: '30%', tokens: '34000000' },
-  { name: 'Airdrop:&nbsp;&nbsp;&nbsp;&nbsp;', percentage: '30%', tokens: '10000000' },
+  { name: '<span style="color: rgba(255, 99, 132)">Presale:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '10%', tokens: '20M' },
+  { name: '<span style="color: rgba(54, 162, 235)">Marketing:&nbsp;&nbsp;</span>', percentage: '20%', tokens: '16M' },
+  { name: '<span style="color: rgba(255, 206, 86)">Development:</span>', percentage: '30%', tokens: '10M' },
+  { name: '<span style="color: rgba(55, 172, 172)">Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '30%', tokens: '10M' },
+  { name: '<span style="color: rgba(153, 102, 255)">Liquidity:&nbsp;&nbsp;</span>', percentage: '30%', tokens: '34M' },
+  { name: '<span style="color: rgba(255, 159, 64)">Airdrop:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '30%', tokens: '10M' },
 ];
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -81,53 +81,56 @@ export const Token = () => {
               <p>Enjoy cashback, unlock premium features, and influence platform changes through voting. Join us in shaping the future of decentralized finance through our token!</p>
               {/* Token contract address */}
               <div className="token-contract-address">
-                <a href="https://solscan.io/token/9mEaVyPj1m15vY8Fr6CYHVvWvdAwfN5sf8FDBA5yac78" target="_blank">Contract: 9mEaVyPj1m15vY8Fr6CYHVvWvdAwfN5sf8FDBA5yac78 (SPL)</a>
+                <a href="https://solscan.io/token/9mEaVyPj1m15vY8Fr6CYHVvWvdAwfN5sf8FDBA5yac78" target="_blank">Contract: 9mEa...ac78 (SPL)</a>
               </div>
 
-              <div className="distribution-list">
-                <div className="distribution-list-row">
-                  <p>Supply:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                  |
-                  <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
-                  |
-                  <p>100000000</p>
-                </div>
-                {distributionData.map((dist, index) => (
+              <div className="token-meter">
+                <div className="distribution-list">
                   <div className="distribution-list-row">
-                    <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
+                    <p>Supply:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
                     |
-                    <p>{dist.percentage}</p>
+                    <p style={{ marginLeft: '7px', marginRight: '7px' }}>100%</p>
                     |
-                    <p>{dist.tokens}</p>
+                    <p>100M</p>
                   </div>
-                ))}
-              </div>
-              <div className="chart">
-                <Doughnut
-                  data={data}
-                  options={{
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                      legend: {
-                        position: 'right',
-                        labels: {
+                  {distributionData.map((dist, index) => (
+                    <div className="distribution-list-row">
+                      <p dangerouslySetInnerHTML={{ __html: dist.name }}></p>
+                      |
+                      <p>{dist.percentage}</p>
+                      |
+                      <p>{dist.tokens}</p>
+                    </div>
+                  ))}
+                </div>
+                <div className="chart">
+                  <Doughnut
+                    data={data}
+                    options={{
+                      responsive: true,
+                      maintainAspectRatio: false,
+                      plugins: {
+                        legend: {
+                          // position: 'right',
+                          display: false,
+                          // labels: {
+                          //   fontSize: 60,
+                          //   boxWidth: 60,
+                          //   boxHeight: 35,
+                          //   padding: 20,
+                          //   color: '#fff',
+                          //   font: {
+                          //     size: 26,
+                          //     weight: 'bold',
+                          //     family: 'monospace'
+                            // }
+                          // },
                           fontSize: 60,
-                          boxWidth: 60,
-                          boxHeight: 35,
-                          padding: 20,
-                          color: '#fff',
-                          font: {
-                            size: 26,
-                            weight: 'bold',
-                            family: 'monospace'
-                          }
-                        },
-                        fontSize: 60,
+                        }
                       }
-                    }
-                  }}
-                />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </div>

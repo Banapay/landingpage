@@ -386,9 +386,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .chart {
   margin: 0 auto;
-  width: 600px;
+  width: 340px;
   height: 600px;
-  /* margin-left: 4px; */
+  margin-left: 100px;
+  /* margin-left: auto; */
   margin-top: -120px;
   float: left;
   font-family: monospace !important;
@@ -406,8 +407,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 24px;
   font-weight: 700;
   padding: 16px;
-  /* margin-right: 4px; */
-
+  margin-right: 100px;
 }
 .distribution-list-row {
   display: flex;
@@ -428,7 +428,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -12px;
 }
 .token-contract-address {
-  width: 100%;
+  /* width: 80%; */
   border-radius: 20px;
   font-size: 24px;
   font-weight: 700;
@@ -445,6 +445,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 2.4em;
   margin: 0;
   margin-top: -28px;
+  word-wrap: break-word;
 }
 
 /************ About Css ************/
@@ -502,6 +503,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     margin-bottom: 20px;
     max-width: 544px;
     width: (100% - 40px);
+  }
+  .token-meter {
+    width: 100%;
+  }
+  .distribution-list {
+    width: 100% !important;
+    float: none;
+  }
+  .chart {
+    width: 100%;
+    max-height: 400px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 1199px) {
