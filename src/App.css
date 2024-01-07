@@ -651,6 +651,29 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     padding: 0 20px;
   }
 
+  .basic-navbar-nav {
+    background-color: #efefef !important;
+  }
+
+  .ms-auto {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-top: 10px;
+  }
+  
+  .ms-auto a {
+    max-width: 100px;
+    display: flex;
+  }
+
+  .navbar-nav {
+    background-color: #efefef !important;
+  }
+
+  .navbar-text {
+    background-color: #efefef !important;
+  }
+
   nav.navbar a.navbar-brand {
     width: auto;
   }
