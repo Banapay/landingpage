@@ -446,13 +446,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex: 1 0 41%;
   background: #fff;
   border-radius: 64px;
-  padding: 40px 30px;
-  margin: 10px;
+  padding: 30px 40px;
+  margin-top: 10px;
   margin-bottom: 40px;
   text-align: center;
   transition: 0.3s ease-in-out;
   /* border: 3px solid #fff; */
-  max-width: 615px;
+  max-width: 630px;
   height: 600px;
 }
 .tile img {
