@@ -1,7 +1,4 @@
 import React from 'react';
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import arrow1 from "../assets/img/arrow1.svg";
@@ -14,12 +11,12 @@ import { Doughnut } from "react-chartjs-2";
 import { Table } from 'react-bootstrap';
 
 const distributionData = [
-  { name: '<span style="color: rgba(255, 99, 132)">Presale:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '10%', tokens: '20M' },
-  { name: '<span style="color: rgba(54, 162, 235)">Marketing:&nbsp;&nbsp;</span>', percentage: '20%', tokens: '16M' },
-  { name: '<span style="color: rgba(255, 206, 86)">Development:</span>', percentage: '30%', tokens: '10M' },
-  { name: '<span style="color: rgba(55, 172, 172)">Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '30%', tokens: '10M' },
-  { name: '<span style="color: rgba(153, 102, 255)">Liquidity:&nbsp;&nbsp;</span>', percentage: '30%', tokens: '34M' },
-  { name: '<span style="color: rgba(255, 159, 64)">Airdrop:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '30%', tokens: '10M' },
+  { name: '<span style="color: rgba(255, 99, 132)">Presale:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '20%', tokens: '20M' },
+  { name: '<span style="color: rgba(54, 162, 235)">Marketing:&nbsp;&nbsp;</span>', percentage: '16%', tokens: '16M' },
+  { name: '<span style="color: rgba(255, 206, 86)">Development:</span>', percentage: '10%', tokens: '10M' },
+  { name: '<span style="color: rgba(55, 172, 172)">Team:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '10%', tokens: '10M' },
+  { name: '<span style="color: rgba(153, 102, 255)">Liquidity:&nbsp;&nbsp;</span>', percentage: '34%', tokens: '34M' },
+  { name: '<span style="color: rgba(255, 159, 64)">Airdrop:&nbsp;&nbsp;&nbsp;&nbsp;</span>', percentage: '10%', tokens: '10M' },
 ];
 
 ChartJS.register(ArcElement, Tooltip, Legend);
