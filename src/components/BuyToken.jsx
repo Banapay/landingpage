@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from 'react';
 import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/banapay-logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
-import { HashLink } from 'react-router-hash-link';
-import {
-  BrowserRouter as Router,
-  Route
-} from "react-router-dom";
 
-export const NavBar = () => {
+const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
@@ -62,5 +57,18 @@ export const NavBar = () => {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
+  );
 }
+
+export const BuyToken = () => {
+  return (
+    <div className="App">
+      <NavBar />
+      <section className="buy-token-banner">
+        <div className="swap-tile">
+        </div>
+      </section>
+    </div>
+  );
+};
+
