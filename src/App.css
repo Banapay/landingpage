@@ -402,9 +402,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Token Css ************/
 .token {
-  padding: 0 0 50px 0;
+  padding: 0px 0 150px 0;
   position: relative;
-  background-color: #efefef;
+  /* background-color: #efefef; */
+  background-image: url('./assets/img/banner-bg.svg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .token-bx {
   /* background: #00BBF999; */
@@ -419,8 +423,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  margin-top: 60px;
   height: 100%;
+
+  padding-bottom: -20px !important;
 }
 .token h2 {
 	font-size: 45px;
