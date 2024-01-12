@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar, Nav, Container } from "react-bootstrap";
+import { Navbar, Nav, Container, Form, Button } from "react-bootstrap";
 import logo from '../assets/img/banapay-logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import navIcon4 from '../assets/img/nav-icon4.svg';
+import { FileEarmarkPlusFill } from 'react-bootstrap-icons';
 
 const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
@@ -66,9 +67,21 @@ export const BuyToken = () => {
       <NavBar />
       <section className="buy-token-banner">
         <div className="swap-tile">
+          <div className="swap-tile-header">
+            {/* <h1>Presale</h1>
+            <p>Buy your $BANA tokens in presale!</p> */}
+          </div>
+          <div className="swap-tile-body">
+            <div className="token-tile">
+            </div>
+            <div className="token-tile">
+            </div>
+            <Button size="lg" className="swap-tile-button">
+              <span>Buy</span>
+            </Button>
+          </div>  
         </div>
       </section>
     </div>
   );
 };
-

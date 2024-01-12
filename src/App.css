@@ -243,7 +243,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: -70px;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.svg');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -349,8 +349,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-color: #efefef;
 }
 .token-bx {
-  background: #00BBF999;
+  /* background: #00BBF999; */
   border-radius: 64px;
+
+  background: rgba(0, 187, 249, 0.4);
+  border-radius: 64px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 1px solid rgba(0, 187, 249, 0.1);
+
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
@@ -402,12 +410,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #11CCFA;
+  /* background-color: #11CCFA; */
   border-radius: 20px;
   font-size: 24px;
   font-weight: 700;
   padding: 16px;
   margin-right: 100px;
+
+  background: rgba(0, 187, 249, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 1px solid rgba(0, 187, 249, 0.1);
 }
 .distribution-list-row {
   display: flex;
@@ -464,7 +479,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .tile {
   flex: 1 0 11%;
-  background: #fff;
+  /* background: #fff; */
   border-radius: 64px;
   padding: 30px 40px;
   margin-top: 10px;
@@ -474,6 +489,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* border: 3px solid #fff; */
   max-width: 630px;
   height: 600px;
+
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .tile img {
   /* width: 90%; */
@@ -722,21 +743,28 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Buy Token Css ************/
 .buy-token-banner {
   height: 100vh;
-  background-image: url('./assets/img/banner-bg.png');
+  background-image: url('./assets/img/banner-bg.svg');
   /* background-position: top center; */
   background-size: cover;
   background-repeat: no-repeat;
 }
-
+.swap-tile-header {
+  color: #F37DD7;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.2em;
+  text-align: center;
+}
 .buy-token-banner .swap-tile {
-  background: rgba(0, 187, 249, 0.45);
-  border-radius: 16px;
+  background: rgba(0, 187, 249, 0.4);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3.2px);
   -webkit-backdrop-filter: blur(3.2px);
-  border: 1px solid rgba(0, 187, 249, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
 
-  width: 78vw;
+  width: 40vw;
   height: 78vh;
   /* margin-left: auto; */
   /* margin-right: auto; */
@@ -748,8 +776,61 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -ms-transform: translateX(-50%);
   transform: translateX(-50%);
   /* margin-top: 100px; */
+  padding: 10px;
 }
+.token-tile {
+  background: rgba(0, 187, 249, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 1px solid rgba(0, 187, 249, 0.1);
 
+  /* width: 94%; */
+  height: 160px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* position: absolute;
+  top: 18%; */
+  /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  /* left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); */
+  /* margin-top: 100px; */
+}
+.swap-tile-button {
+  background: #F15BB5 !important;
+  border-radius: 16px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(3.2px) !important;
+  -webkit-backdrop-filter: blur(3.2px) !important;
+  border: 1px solid rgba(0, 187, 249, 0.1) !important;
+
+  width: 100%;
+  height: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* position: absolute;
+  top: 18%; */
+  /* -ms-transform: translateY(-50%);
+  transform: translateY(-50%); */
+  /* left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); */
+  /* margin-top: 100px; */
+}
+.swap-tile-button:hover {
+  background: #F04AA4 !important;
+}
 
 @media screen and (max-width: 1300px) {
   main .container {
