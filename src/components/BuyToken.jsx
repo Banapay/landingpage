@@ -68,8 +68,7 @@ export const BuyToken = () => {
       <section className="buy-token-banner">
         <div className="swap-tile">
           <div className="swap-tile-header">
-            {/* <h1>Presale</h1>
-            <p>Buy your $BANA tokens in presale!</p> */}
+            <p>Buy</p>
           </div>
           <div className="swap-tile-body">
             <div className="token-tile">
